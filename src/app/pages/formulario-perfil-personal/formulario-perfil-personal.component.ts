@@ -23,13 +23,13 @@ export class FormularioPerfilPersonalComponent implements OnInit, AfterViewInit 
   @ViewChild('skillsSeleccionadas') skASeleccionadas!: ElementRef;
 
   public userForm = this.fb.group({
-    nombre: ['Manuel', [Validators.required, Validators.pattern("[a-zA-Z Ñ ñ]*")]],
-    apellidos: ['Fernana', [Validators.required, Validators.pattern("[a-zA-Z Ñ ñ]*")]],
+    nombre: ['', [Validators.required, Validators.pattern("[a-zA-Z Ñ ñ]*")]],
+    apellidos: ['', [Validators.required, Validators.pattern("[a-zA-Z Ñ ñ]*")]],
     descripcion: [''],
-    ciudad: ['malala', [Validators.required, Validators.pattern("[a-zA-Z Ñ ñ]+")]],
-    email: ['lolo@lolo', [Validators.required, Validators.email]],
-    pais: ['españa', [Validators.required, Validators.pattern("[a-zA-Z Ñ ñ]*")]],
-    experiencia: ['1', [Validators.required, Validators.min(0)]],
+    ciudad: ['', [Validators.required, Validators.pattern("[a-zA-Z Ñ ñ]+")]],
+    email: ['', [Validators.required, Validators.email]],
+    pais: ['', [Validators.required, Validators.pattern("[a-zA-Z Ñ ñ]*")]],
+    experiencia: ['0', [Validators.required, Validators.min(0)]],
     sector: ['', [Validators.required]]
   })
 
