@@ -64,10 +64,21 @@ export class FormularioPerfilPersonalComponent implements OnInit, AfterViewInit 
             this.renderer.removeClass(div, 'ocultar');
           });
         })
-        this.renderer.addClass(div, 'skill');
+        this.renderer.addClass(div, 'card');
+        this.renderer.setStyle(div,'cursor','pointer');
         const img = this.renderer.createElement('img');
-        this.renderer.addClass(img, 'img');
+        this.renderer.setStyle(img,'width','50px');
+
+        this.renderer.addClass(img, 'card-img-top');
+
         this.renderer.appendChild(div, img);
+        const card_body = this.renderer.createElement('div');
+        const p = this.renderer.createElement('p');
+        this.renderer.addClass(p,'card-text');
+        const nombre = this.renderer.createText(skill.nombre)
+        this.renderer.appendChild(p,nombre);
+        this.renderer.appendChild(card_body,p);
+        this.renderer.appendChild(div,card_body)
         this.renderer.setAttribute(img, 'src', skill.src);
         this.renderer.setAttribute(img, 'nombre', skill.nombre);
         this.renderer.appendChild(this.skillsAseleccionar.nativeElement, div);

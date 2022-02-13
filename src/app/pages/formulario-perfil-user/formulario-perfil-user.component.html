@@ -1,11 +1,28 @@
 <h1>MWC Perfil User</h1>
 
-<p>{{this.user.nombre}}</p>
-<p>{{this.user.apellidos}}</p>
-<p>{{this.user.email}}</p>
-<p>{{this.user.ciudad}}</p>
-<p>{{this.user.pais}}</p>
-<p>{{this.user.sector}}</p>
-<p>{{this.user.skills | json}}</p>
+<div class="col-md-4">
+    <div class="row">
+        <div class="card m-3" >
+            <img src="https://eu.ui-avatars.com/api/?name=Manuel+Fernana" class="card-img-top" alt="..." style="width: 100px">
+            <div class="card-body">
+                <h5 class="card-title">{{this.user.sector}}</h5>
+                <p class="card-text"><b>Nombre:</b>  {{this.user.nombre}} <b>Apellidos:</b>  {{this.user.apellidos}} </p>
+                <p class="card-text"><b>Email:</b>  {{this.user.email}}</p>
+                <p class="card-text"><b>Ciudad:</b> {{this.user.ciudad}} <b>País:</b>  {{this.user.pais}} </p>
+                <p class="card-text"><b>Breve descripción:</b> {{this.user.descripcion}}</p>
+            </div>
+            <ul class="list-group list-group-flush" >
+                <li class="list-group-item" *ngFor="let item of skills">
+                    <div class="row">
+                        <p class="card-text">{{item.nombre}}</p>
+                        <img class="img-thumbnail" src="{{item.src}}" alt="" style="width: 50px">
+                    </div>                    
+                </li>                
+            </ul>           
+        </div>
+    </div>
+</div>
+
+
 
 <a class="btn btn-primary mt-3" routerLink="">atras</a>

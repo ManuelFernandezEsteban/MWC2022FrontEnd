@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../interfaces/user';
+import { Skill } from '../../interfaces/skill';
 
 @Component({
   selector: 'app-formulario-perfil-user',
@@ -19,6 +20,7 @@ export class FormularioPerfilUserComponent implements OnInit {
     sector: '',
     skills: []
   }
+  public skills:Skill[]=[]
 
   constructor() {
 
@@ -31,6 +33,9 @@ export class FormularioPerfilUserComponent implements OnInit {
       this.user=JSON.parse(userStorage);
       console.log(this.user);
     }
+
+    this.skills=this.user.skills;
+
 
   }
 
