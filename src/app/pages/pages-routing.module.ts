@@ -5,14 +5,14 @@ import { LandPageComponent } from './land-page/land-page.component';
 import { FormularioPerfilPersonalComponent } from './formulario-perfil-personal/formulario-perfil-personal.component';
 import { FormularioPerfilUserComponent } from './formulario-perfil-user/formulario-perfil-user.component';
 
+
 const routes:Routes=[
   {
     path:'landpage',
     component:LandPageComponent,
-    children:[    
-      
+    children:[  
       {path:'crear_perfil',component:FormularioPerfilPersonalComponent},
-      {path:'ver_perfil',component:FormularioPerfilUserComponent},
+      {path:'ver_perfil',component:FormularioPerfilUserComponent}
     ]
   }
 ]

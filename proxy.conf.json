@@ -1,0 +1,6 @@
+{
+    "/api/*":{
+        "target":"https://eu.ui-avatars.com/",
+        "loglevel":"debug"
+    }
+}

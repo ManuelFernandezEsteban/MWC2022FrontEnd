@@ -13,10 +13,5 @@ export class LandPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  crearPerfil(){
-    this.router.navigateByUrl('crear_perfil')
-  }
-  verPerfil(){
-    this.router.navigateByUrl('ver_perfil')
-  }
+  
 }
